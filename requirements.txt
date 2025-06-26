@@ -1,0 +1,11 @@
+reqs = '''
+Flask
+pyngrok
+tensorflow
+numpy
+pillow
+'''
+with open("requirements.txt", "w") as f:
+    f.write(reqs)
+
+files.download("requirements.txt")
