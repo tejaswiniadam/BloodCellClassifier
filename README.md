@@ -51,14 +51,16 @@ It contains four types of blood cell images organized into `TRAIN` and `TEST` fo
 ## 🖼️ Sample UI
 <!-- You can upload an image in GitHub repo and update this path -->
 
-### 📂 Folder Structure
+## 📂 Folder Structure
 ```
-├── app.py              # Flask app  
-├── Blood_Cell.h5       # Trained model  
-├── templates/          # HTML templates (if used)  
-├── dataset/            # TRAIN/TEST folders (if applicable)  
-├── README.md           # Project description  
+├── app.py               # Flask app  
+├── Blood_Cell.h5        # Trained model  
+├── templates/           # HTML templates (if used)  
+├── dataset/             # TRAIN/TEST folders (if applicable)  
+├── requirements.txt     # Dependencies  
+├── README.md            # Project documentation  
 ```
+
 
 ### 🚀 Deployment Suggestion
 
