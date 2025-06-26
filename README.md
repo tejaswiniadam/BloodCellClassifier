@@ -43,12 +43,12 @@ from pyngrok import ngrok
 ngrok.set_auth_token("YOUR_AUTH_TOKEN")  # get it from https://dashboard.ngrok.com/get-started/setup
 !python app.py
 
-🧪 How to Run Locally (Optional)
+## 🧪 How to Run Locally (Optional)
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 pip install -r requirements.txt
 python app.py
-🖼️ Sample UI
+## 🖼️ Sample UI
 <!-- You can upload an image in GitHub repo and update this path -->
 
 📂 Folder Structure
@@ -58,13 +58,13 @@ python app.py
 ├── dataset/              # TRAIN/TEST folders (if used locally)
 ├── README.md             # This file
 
-🚀 Deployment Suggestion
+## 🚀 Deployment Suggestion
 For full online deployment, use:
 Render
 Railway
 Or keep using Google Colab + ngrok for demo
 
-📬 Contact
+## 📬 Contact
 Made with ❤️ by Adam Tejaswini
 For queries, drop a mail: adamtejaswini1432@gmail.com
 
