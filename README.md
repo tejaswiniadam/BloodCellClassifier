@@ -44,9 +44,9 @@ pip install -r requirements.txt
 python app.py
 **🖼️ Sample UI**
 **📤 Upload Page**
-<img src="https://github.com/tejaswiniadam/BloodCellClassifier/assets/your-upload-img.png" width="500" alt="Upload Page">
+<img src="https://github.com/tejaswiniadam/BloodCellClassifier/main/assets/upload.jpg" width="500" alt="Upload Page">
 **✅ Predicted Result**
-<img src="https://github.com/tejaswiniadam/BloodCellClassifier/assets/your-result-img.png" width="500" alt="Prediction Result">
+<img src="https://github.com/tejaswiniadam/BloodCellClassifier/main/assets/predicted.jpg" width="500" alt="Prediction Result">
 📌 These screenshots show how the user uploads a blood cell image and receives prediction results using the HematoVision interface.
 
 📂 Folder Structure
