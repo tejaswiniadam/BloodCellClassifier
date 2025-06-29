@@ -1,62 +1,62 @@
+result_html = '''
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Prediction Result - HematoVision</title>
+  <title>Prediction Result</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f6f7fb;
+      font-family: Arial;
+      background-color: #f4f6f8;
       margin: 0;
       padding: 0;
     }
     .container {
-      width: 70%;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 60%;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
     .header {
       background-color: #e74c3c;
-      color: white;
       padding: 20px;
       border-radius: 10px 10px 0 0;
+      color: #fff;
       font-size: 24px;
       font-weight: bold;
     }
-    .result {
-      font-size: 22px;
-      color: #333;
-      margin: 20px 0;
-    }
     img {
       max-width: 300px;
-      margin-top: 20px;
       border-radius: 10px;
+      margin-top: 20px;
     }
     .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
       background-color: #e74c3c;
       color: white;
-      text-decoration: none;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
       border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">Prediction Result</div>
-    <div class="result">{{ result }}</div>
-    {% if img_url %}
-      <img src="{{ img_url }}" alt="Uploaded Cell Image">
-    {% endif %}
-    <br>
-    <a href="/" class="btn">⟵ Predict Another</a>
+    <h3>Predicted Class: {{ result }}</h3>
+    <img src="data:image/jpeg;base64,{{ img_data }}" alt="Predicted Image">
+    <form action="/" method="get">
+      <button class="btn" type="submit">Upload Another Image</button>
+    </form>
   </div>
 </body>
 </html>
+'''
+
+with open("templates/result.html", "w") as f:
+    f.write(result_html)
