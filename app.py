@@ -10,7 +10,9 @@ import base64
 
 # Load the trained model
 model = load_model("Blood_Cell.h5")
-class_labels = ['eosinophil', 'lymphocyte', 'monocyte', 'neutrophil']
+
+# ✅ Make sure this matches the label order from your training process
+class_labels = ['eosinophil', 'lymphocyte', 'monocyte', 'neutrophil']  # Change if needed
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -26,9 +28,15 @@ def upload_predict():
             image_rgb = image.convert("RGB")
             resized = image_rgb.resize((224, 224))
             image_np = np.array(resized)
+            
+            # ✅ Optional: Normalize if your model was trained on normalized inputs
+            # image_np = image_np / 255.0  # Uncomment only if needed
+
             image_np = preprocess_input(image_np.reshape(1, 224, 224, 3))
 
             prediction = model.predict(image_np)
+            print("✅ Raw prediction:", prediction)  # Debug output
+
             class_idx = np.argmax(prediction)
             result = class_labels[class_idx]
 
